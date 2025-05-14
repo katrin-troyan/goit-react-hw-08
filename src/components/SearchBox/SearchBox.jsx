@@ -1,6 +1,7 @@
 import { useId } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeFilter, selectNameFilter } from '../../redux/filtersSlice';
+import { changeFilter } from '../../redux/filters/slice';
+import { selectNameFilter } from '../../redux/filters/selectors';
 import css from './SearchBox.module.css';
 
 export default function SearchBox() {
@@ -15,7 +16,7 @@ export default function SearchBox() {
   return (
     <div className={css.searchBox}>
       <label htmlFor={inputId} className={css.labelSearch}>
-        Find contacts by name
+        Find contacts by name or number
         <input
           className={css.inputSearch}
           type="text"

@@ -1,0 +1,57 @@
+.contactForma {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+  width: 350px;
+  padding: 30px;
+  border: 1px solid #3e5a63;
+  border-radius: 10px;
+  background-color: #3e5a63;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4),
+    -8px -8px 16px rgba(255, 255, 255, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+.formaLabel {
+  font-weight: bold;
+}
+.formaInput {
+  height: 50px;
+  width: 100%;
+  padding: 5px 10px;
+  border: 2px solid #3e5a63;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #0b3c3f;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.formaInput:focus,
+.formaInput:hover {
+  border-color: #0b3c3f;
+  box-shadow: 0 0 5px rgba(11, 60, 63, 0.5);
+  outline: none;
+}
+
+.registertBtn {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0b3c3f;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+.registertBtn:hover,
+.registertBtn:focus {
+  outline: none;
+  box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.3),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.08),
+    0 0 12px 2px rgba(255, 255, 255, 0.2);
+}
+@media only screen and (min-width: 768px) {
+  .contactForma {
+    width: 350px;
+  }
+}

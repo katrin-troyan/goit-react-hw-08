@@ -1,9 +1,10 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/operations';
 import * as Yup from 'yup';
 import { useId } from 'react';
 import { nanoid } from 'nanoid';
+import { toast } from 'react-hot-toast';
 import css from './ContactForm.module.css';
 
 export default function ContactForm() {
@@ -27,8 +28,15 @@ export default function ContactForm() {
   });
 
   const handleSubmit = (values, actions) => {
-    dispatch(addContact(values));
-    actions.resetForm();
+    dispatch(addContact(values))
+      .unwrap()
+      .then(() => {
+        toast.success('Contact added successfully!');
+        actions.resetForm();
+      })
+      .catch(() => {
+        toast.error('Failed to add contact.');
+      });
   };
 
   return (
