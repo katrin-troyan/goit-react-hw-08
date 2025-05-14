@@ -1,0 +1,37 @@
+.contactBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  padding: 20px;
+  border: 1px solid #3e5a63;
+  border-radius: 10px;
+  background-color: #3e5a63;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4),
+    -8px -8px 16px rgba(255, 255, 255, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+.contactBoxIcon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contactText {
+  font-weight: bold;
+}
+.contactBoxBtn {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0b3c3f;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contactBoxBtn:hover,
+.contactBoxBtn:focus {
+  outline: none;
+  box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.3),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.08),
+    0 0 12px 2px rgba(255, 255, 255, 0.2);
+}
